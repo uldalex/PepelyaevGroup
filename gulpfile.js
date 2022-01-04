@@ -55,7 +55,7 @@ let doNotEditMsg = '\n ВНИМАНИЕ! Этот файл генерирует�
 
 // Настройки pug-компилятора
 let pugOption = {
-  data: { repoUrl: 'https://github.com/nicothin/NTH-start-project', },
+  data: { repoUrl: 'https://github.com/uldalex/PepelyaevGroup', },
   filters: { 'show-code': filterShowCode, },
 };
 
