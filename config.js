@@ -33,7 +33,7 @@ let config = {
     'src/fonts/Geometria-Regular.woff2': 'fonts/',
     'src/fonts/Geometria-Italic.woff2': 'fonts/',
     'src/img/*.{png,svg,jpg,jpeg}': 'img/',
-    // 'src/favicon/*.{png,ico,svg,xml,webmanifest}': 'img/favicon',
+    'src/favicon/*.{png,ico,svg,xml,webmanifest}': 'img/favicon',
     // 'node_modules/somePackage/images/*.{png,svg,jpg,jpeg}': 'img/',
   },
   'dir': {

@@ -92,15 +92,12 @@
 html {
   font-size:18px;
 
-  @media(max-width:1920px)and(min-width:1600px){
+  @media(max-width:1920px)and(min-width:1024px){
     font-size:16px;
   } 
-  @media(max-width:1600px)and(min-width:1024px){
-    font-size:14px;
-  }
 
   @media(max-width:1024px){
-    font-size:12px;
+    font-size:14px;
   }
 
 }
@@ -146,6 +143,7 @@ select,
 textarea {
   touch-action: manipulation; // Стилевая коррекция 300ms задержки (для поддерживающих браузеров)
   margin: 0;                  // Убираем margin в Firefox и Safari
+  outline:none;
 }
 
 button,
@@ -204,18 +202,14 @@ a {
   background-color: transparent;
   transition: color 0.3s;
   text-decoration:none;
-  border-bottom:1px solid #92278F;
+  
 
-  &:hover,
-   {
+  &:hover{
     color: #6F196C;
   }
   &:focus {
     color: #92278F;
   }
-  // &:visited {
-  //   color: $link-color--hover;
-  // }
 
   &[href^="tel:"] {
 
@@ -226,6 +220,9 @@ a {
       text-decoration: inherit;
       color: inherit;
     }
+  }
+  &.solid {
+    border-bottom:1px solid #92278F;
   }
 }
 
@@ -562,6 +559,7 @@ pre {
 .offset-md-2{
  @include col-offset(md, 2, 12)
 }
+
 .offset-lg-2{
   @include col-offset(lg, 2, 12)
  }
@@ -576,4 +574,18 @@ pre {
  }
  .offset-xxl-2{
   @include col-offset(xxl, 2, 12)
+ }
+
+ .banner {
+   min-height:600px;
+   background-image:url('../img/bg.svg');
+   background-size:cover;
+   background-position:center;
+   margin-top:-55px;
+ }
+ .not-authorized {
+   display:none;
+   &.authorized {
+     display:block;
+   }
  }

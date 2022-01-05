@@ -1,6 +1,6 @@
 // Базовые цвета https://colorscheme.ru/color-converter.html
 
-$black:                       hsl(0, 0%, 0%);
+$black:                       #272C3E;
 $gray-darkest:                hsl(0, 0%, 10%);
 $gray-darker:                 hsl(0, 0%, 20%);
 $gray-darken:                 hsl(0, 0%, 30%);
@@ -54,8 +54,8 @@ $line-height:                 1.5;
 
 $typo-margin-vertical:        1em;
 
-$font-family:                 'SBSansText';
-$font-family--monospace:     'SBSansDisplay';
+$font-family:                 'Geometria';
+$font-family--monospace:     'Geometria';
 
 
 
@@ -91,8 +91,9 @@ $opacity:                     0.7;
 $transition-time:             0.3s;
 $shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
 
-$menu-desktop-width:          $container-xxl;
+$menu-desktop-width:         768px;
 $toggler-part-height:         2px;
-$toggler-part-bg-color:       #ffffff;
+$toggler-part-bg-color:       #92278F;
+;
 
 $z-index-modal:               100;

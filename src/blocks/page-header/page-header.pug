@@ -19,4 +19,62 @@ mixin page-header(mods)
 
   header.page-header(class=allMods, role='banner')&attributes(attributes)
     .page-header__inner
+      .page-header__row
+        .page-header__left-part 
+          ul.page-header__list
+            li
+              a(href="tel:+74957670007" aria-label="позвонить" ) +7 (495) 767-00-07
+            li
+              a(href="mailto:info@pgplaw.ru" aria-label="написать") info@pgplaw.ru
+        +logo('/')
+          img(src='img/logo.svg', alt='Logo', width='126', height='36')
+        +burger('Показать содержание', 'nav', 'main-nav--open')(class='main-nav__toggler')
+        .page-header__right-part 
+          ul.page-header__list
+            li 
+              a(href="#" aria-label="поиск") Поиск
+            li
+              a(href="#" aria-label="выбрать язык")
+                span Ru
+            .launguage-panel 
+              ul 
+                li
+                  a(href="#" aria-label="English")
+                    span English	 
+                li
+                  a(href="#" aria-label="中文")
+                    span 中文 
+                li
+                  a(href="#" aria-label="한국어")
+                  span 한국어
+                li
+                  a(href="#" aria-label="Deutsch")
+                    span Deutsch	
+                li
+                  a(href="#" aria-label="Italiano")
+                    span Italiano
+                li
+                  a(href="#" aria-label="Español")
+                    span Español
+                li
+                  a(href="#" aria-label="Français")
+                    span Français
+                li
+                  a(href="#" aria-label="日本語")
+                    span 日本語
+                li
+                  a(href="#" aria-label="Português")
+                    span Português
+                li
+                  a(href="#" aria-label="Türkçe")
+                    span Türkçe
+            li 
+              a.not-authorized.authorized(href="#" aria-label="войти") Вoйти
+              a.not-authorized(href="#" aria-label="Личный кабинет") Личный кабинет
+              ul.user-panel 
+                li 
+                  a(href="#" aria-label="Личный кабинет") Личный кабинет
+                li
+                  a(href="#" aria-label="Выход") Выйти
+      
       block
