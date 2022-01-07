@@ -9,6 +9,14 @@
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
   <meta content="notranslate" name="google">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#5bbad5">
+  <meta name="msapplication-navbutton-color" content="#000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
   <meta property="og:title" content="Пепеляев Групп">
   <meta property="og:description" content="Юридическая компания Пепеляев Групп">
   <meta property="og:image" content="img/preview.jpg">
@@ -44,38 +52,115 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
             </div><a class="logo" href="/"><img src="img/logo.svg" alt="Logo" width="126" height="36" /></a><button class="burger main-nav__toggler" aria-label="Показать содержание" data-target-id="nav" data-target-class-toggle="main-nav--open"><span>Показать содержание</span></button>
             <div class="page-header__right-part">
               <ul class="page-header__list">
-                <li> <a href="#" aria-label="поиск">Поиск</a></li>
-                <li><a href="#" aria-label="выбрать язык"><span>Ru</span></a></li>
-                <div class="launguage-panel">
-                  <ul>
-                    <li><a href="#" aria-label="English"><span>English	 </span></a></li>
-                    <li><a href="#" aria-label="中文"><span>中文 </span></a></li>
-                    <li><a href="#" aria-label="한국어"></a><span>한국어</span></li>
-                    <li><a href="#" aria-label="Deutsch"><span>Deutsch	</span></a></li>
-                    <li><a href="#" aria-label="Italiano"><span>Italiano</span></a></li>
-                    <li><a href="#" aria-label="Español"><span>Español</span></a></li>
-                    <li><a href="#" aria-label="Français"><span>Français</span></a></li>
-                    <li><a href="#" aria-label="日本語"><span>日本語</span></a></li>
-                    <li><a href="#" aria-label="Português"><span>Português</span></a></li>
-                    <li><a href="#" aria-label="Türkçe"><span>Türkçe</span></a></li>
-                  </ul>
-                </div>
-                <li> <a class="not-authorized authorized" href="#" aria-label="войти">Вoйти</a><a class="not-authorized" href="#" aria-label="Личный кабинет">Личный кабинет</a>
-                  <ul class="user-panel">
-                    <li> <a href="#" aria-label="Личный кабинет">Личный кабинет</a></li>
-                    <li><a href="#" aria-label="Выход">Выйти</a></li>
-                  </ul>
+                <li> <a class="page-header__search-link" id="search-open" href="#" aria-label="поиск">Поиск</a>
+                  <div class="page-header__search-panel" id="search-fixed">
+                    <div class="page-header__inner">
+                      <h4>Поиск по сайту</h4>
+                      <form action="/search/" method="get">
+                        <div class="row">
+                          <div class="col-xxl-5 col-xl-5 col-md-6"><input type="text" name="q" placeholder="Введите поисковый запрос" /></div>
+                          <div class="col-xxl-2 col-xl-2 col-md-2"><input type="submit" value="Найти" /></div>
+                        </div>
+                      </form><a class="page-header__search-close solid" id="search-close" href="#">Закрыть</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="page-header__launguage-link"><a href="#" aria-label="выбрать язык"><span>Ru</span></a>
+                  <div class="launguage-panel" id="launguage-panel">
+                    <ul>
+                      <li><a href="#" aria-label="English"><span>English	 </span></a></li>
+                      <li><a href="#" aria-label="中文"><span>中文 </span></a></li>
+                      <li><a href="#" aria-label="한국어"></a><span>한국어</span></li>
+                      <li><a href="#" aria-label="Deutsch"><span>Deutsch	</span></a></li>
+                      <li><a href="#" aria-label="Italiano"><span>Italiano</span></a></li>
+                      <li><a href="#" aria-label="Español"><span>Español</span></a></li>
+                      <li><a href="#" aria-label="Français"><span>Français</span></a></li>
+                      <li><a href="#" aria-label="日本語"><span>日本語</span></a></li>
+                      <li><a href="#" aria-label="Português"><span>Português</span></a></li>
+                      <li><a href="#" aria-label="Türkçe"><span>Türkçe</span></a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li> <a class="page-header__authorize-link not-authorized" href="#" aria-label="войти">Вoйти</a>
+                  <div class="page-header__authorize-link authorized" id="lk" href="#" aria-label="Личный кабинет">Личный кабинет<div class="user-panel">
+                      <ul>
+                        <li> <a href="#" aria-label="Личный кабинет">Личный кабинет</a></li>
+                        <li><a href="#" aria-label="Выход">Выйти</a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </header>
-      <div class="banner"> </div>
+      <div class="banner">
+        <div class="banner__inner">
+          <div class="banner__row">
+            <div class="splide  splide--banner" id="banner">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="splide__text">В рейтинг Best Lawyers™ 2022 в&nbsp;России вошли 46 юристов «Пепеляев&nbsp;Групп»</div><a class="splide__link" href="#" aria-label="Читать новость">Читать новость</a>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="splide__text">В рейтинг Best Lawyers™ 2022 в&nbsp;России вошли 46 юристов «Пепеляев&nbsp;Групп»</div><a class="splide__link" href="#" aria-label="Читать новость">Читать новость </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="splide__arrows"><button class="splide__arrow splide__arrow--prev"></button><button class="splide__arrow splide__arrow--next"></button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-servise">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="text-center">Услуги</h3>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-md-6">
+              <div class="servise-form">
+                <p class="servise-form__title">практики
+                <div class="dropdown">
+                  <div class="select"> <span>Найдите нужную практику</span></div>
+                  <ul class="dropdown-menu" id="practicleList"><input class="search-input" id="practicleListListInputFilter" type="text" placeholder="Поиск практики">
+                    <div class="dropdown__close" id="practicleFilterClose"> </div>
+                    <li><a class="servise-form__link" href="" aria-label="COVID-19. Юр. поддержка бизнеса">COVID-19. Юр. поддержка бизнеса</a></li>
+                    <li> <a class="servise-form__link" href="" aria-label="Корпоративное право">Корпоративное право</a></li>
+                    <li> <a class="servise-form__link" href="" aria-label="Банкротство и антикризисная защита бизнеса">Банкротство и антикризисная защита бизнеса</a></li>
+                    <li> <a class="servise-form__link" href="" aria-label="Антимонопольное регулирование">Антимонопольное регулирование</a></li>
+                  </ul>
+                </div>
+                </p>
+                <div class="servise-form__tags"><a class="servise-form__tag" href="" aria-label="COVID-19. Юр. поддержка бизнеса">COVID-19. Юр. поддержка бизнеса</a><a class="servise-form__tag" href="" aria-label="Корпоративное право">Корпоративное право</a><a class="servise-form__tag" href="" aria-label="Банкротство и антикризисная защита бизнеса">Банкротство и антикризисная защита бизнеса</a></div><a class="servise-form__readmore solid" href="" aria-label="Перейти к полному списку">Перейти к полному списку</a>
+              </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-md-6">
+              <div class="servise-form">
+                <p class="servise-form__title">Отрасли
+                <div class="dropdown">
+                  <div class="select"> <span>Найдите нужную отрасль</span></div>
+                  <ul class="dropdown-menu" id="branchesList"><input class="search-input" id="branchesListListInputFilter" type="text" placeholder="Поиск отрасли">
+                    <div class="dropdown__close" id="branchesFilterClose"> </div>
+                    <li><a class="servise-form__link" href="" aria-label="Здравоохранение">Здравоохранение</a></li>
+                    <li> <a class="servise-form__link" href="" aria-label="Цифровая экономика">Цифровая экономика</a></li>
+                    <li> <a class="servise-form__link" href="" aria-label="Энергетика">Энергетика</a></li>
+                    <li> <a class="servise-form__link" href="" aria-label="Экология">Экология</a></li>
+                  </ul>
+                </div>
+                </p>
+                <div class="servise-form__tags"><a class="servise-form__tag" href="" aria-label="Здравоохранение">Здравоохранение</a><a class="servise-form__tag" href="" aria-label="Цифровая экономика">Цифровая экономика</a><a class="servise-form__tag" href="" aria-label="Энергетика">Энергетика</a><a class="servise-form__tag" href="" aria-label="Экология">Экология</a></div><a class="servise-form__readmore solid" href="" aria-label="Перейти к полному списку">Перейти к полному списку</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <p>содерddddddddжимое</p>
     </div>
   </div>
-  <script src="js/bundle.js"></script>
+  <script src="js/splide.min.js"></script><script src="js/bundle.js"></script>
 
 </body>
 

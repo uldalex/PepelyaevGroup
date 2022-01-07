@@ -1,0 +1,30 @@
+//- Все примеси в этом файле должны начинаться c имени блока (splide)
+
+mixin splide(id, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +splide('Текст', 'some-mod')
+
+  -
+
+    // список модификаторов
+    var allMods = ''; 
+  
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' splide--' + modsList[i].trim();
+      }
+    }
+
+  .splide(class=allMods, id=id)
+    .splide__track
+      ul.splide__list
+        block
+        
+    .splide__arrows
+      button.splide__arrow.splide__arrow--prev
+      button.splide__arrow.splide__arrow--next

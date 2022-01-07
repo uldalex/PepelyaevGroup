@@ -104,16 +104,16 @@
         z-index: 1;
         top: 100%;
         left: 0;
-        height: 0;
-        opacity: 0;
+        max-height: 0;
+        opacity: 1;
         overflow: hidden;
-        transition: opacity $transition-time;
+        transition:all $transition-time;
 
         // stylelint-disable
         #{$block-name}__item--show-child > &,
         #{$block-name}__item:hover & {
-          height: auto;
-          overflow: visible;
+          max-height: 800px;
+          transition:all 0.5s linear;
           opacity: 1;
         }
         // stylelint-enable

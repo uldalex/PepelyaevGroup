@@ -32,49 +32,60 @@ mixin page-header(mods)
         .page-header__right-part 
           ul.page-header__list
             li 
-              a(href="#" aria-label="поиск") Поиск
-            li
+              a#search-open.page-header__search-link(href="#" aria-label="поиск") Поиск
+              #search-fixed.page-header__search-panel 
+                .page-header__inner
+                  h4 Поиск по сайту
+                  form(action="/search/" method="get")
+                    .row
+                      .col-xxl-5.col-xl-5.col-md-6
+                        input(type="text" name="q" placeholder="Введите поисковый запрос")
+                      .col-xxl-2.col-xl-2.col-md-2
+                        input(type="submit" value="Найти")
+                  a#search-close.page-header__search-close.solid(href="#") Закрыть
+            li.page-header__launguage-link
               a(href="#" aria-label="выбрать язык")
                 span Ru
-            .launguage-panel 
-              ul 
-                li
-                  a(href="#" aria-label="English")
-                    span English	 
-                li
-                  a(href="#" aria-label="中文")
-                    span 中文 
-                li
-                  a(href="#" aria-label="한국어")
-                  span 한국어
-                li
-                  a(href="#" aria-label="Deutsch")
-                    span Deutsch	
-                li
-                  a(href="#" aria-label="Italiano")
-                    span Italiano
-                li
-                  a(href="#" aria-label="Español")
-                    span Español
-                li
-                  a(href="#" aria-label="Français")
-                    span Français
-                li
-                  a(href="#" aria-label="日本語")
-                    span 日本語
-                li
-                  a(href="#" aria-label="Português")
-                    span Português
-                li
-                  a(href="#" aria-label="Türkçe")
-                    span Türkçe
+              #launguage-panel.launguage-panel 
+                ul 
+                  li
+                    a(href="#" aria-label="English")
+                      span English	 
+                  li
+                    a(href="#" aria-label="中文")
+                      span 中文 
+                  li
+                    a(href="#" aria-label="한국어")
+                    span 한국어
+                  li
+                    a(href="#" aria-label="Deutsch")
+                      span Deutsch	
+                  li
+                    a(href="#" aria-label="Italiano")
+                      span Italiano
+                  li
+                    a(href="#" aria-label="Español")
+                      span Español
+                  li
+                    a(href="#" aria-label="Français")
+                      span Français
+                  li
+                    a(href="#" aria-label="日本語")
+                      span 日本語
+                  li
+                    a(href="#" aria-label="Português")
+                      span Português
+                  li
+                    a(href="#" aria-label="Türkçe")
+                      span Türkçe
             li 
-              a.not-authorized.authorized(href="#" aria-label="войти") Вoйти
-              a.not-authorized(href="#" aria-label="Личный кабинет") Личный кабинет
-              ul.user-panel 
-                li 
-                  a(href="#" aria-label="Личный кабинет") Личный кабинет
-                li
-                  a(href="#" aria-label="Выход") Выйти
+              a.page-header__authorize-link.not-authorized(href="#" aria-label="войти") Вoйти
+              #lk.page-header__authorize-link.authorized(href="#" aria-label="Личный кабинет") Личный кабинет
+                .user-panel 
+                  ul
+                    li 
+                      a(href="#" aria-label="Личный кабинет") Личный кабинет
+                    li
+                      a(href="#" aria-label="Выход") Выйти
       
       block

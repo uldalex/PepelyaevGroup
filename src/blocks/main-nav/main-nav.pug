@@ -34,10 +34,10 @@ mixin main-nav-item(selectedID, item, level)
     if(item.childs) {
       thisItemClass += '  main-nav__item--has-child';
     }
-    if(level > 1) {
+
       thisItemClass += '  main-nav__item--lvl-' + level;
       thisLinkClass += '  main-nav__link--lvl-' + level;
-    }
+
 
   li(class= thisItemClass)
     a(class= thisLinkClass, href=item.url)= item.name

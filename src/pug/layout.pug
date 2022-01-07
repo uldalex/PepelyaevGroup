@@ -14,16 +14,14 @@ html(class='page  no-js', lang='ru')
     meta(name='format-detection', content='address=no')
     meta(name='format-detection', content='email=no')
     meta(content='notranslate', name='google')
-    //- Фавиконки (https://realfavicongenerator.net)
-    //- link(rel='apple-touch-icon', sizes='180x180', href='/img/favicon/apple-touch-icon.png')
-    //- link(rel='icon', type='image/png', sizes='32x32', href='/img/favicon/favicon-32x32.png')
-    //- link(rel='icon', type='image/png', sizes='16x16', href='/img/favicon/favicon-16x16.png')
-    //- link(rel='manifest', href='/img/favicon/site.webmanifest')
-    //- link(rel='mask-icon', href='/img/favicon/safari-pinned-tab.svg', color='#5bbad5')
-    //- meta(name='msapplication-TileColor', content='#5bbad5')
-    //- meta(name='theme-color', content='#000')
-    //- meta(name='msapplication-navbutton-color', content='#000')
-    //- meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    link(rel='apple-touch-icon', sizes='180x180', href='/img/favicon/apple-touch-icon.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='/img/favicon/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='/img/favicon/favicon-16x16.png')
+    link(rel='manifest', href='/img/favicon/site.webmanifest')
+    link(rel='mask-icon', href='/img/favicon/safari-pinned-tab.svg', color='#5bbad5')
+    meta(name='msapplication-TileColor', content='#5bbad5')
+    meta(name='msapplication-navbutton-color', content='#000')
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
     meta(property="og:title" content="Пепеляев Групп")
     meta(property="og:description" content="Юридическая компания Пепеляев Групп")
     meta(property="og:image" content="img/preview.jpg")
@@ -43,11 +41,72 @@ html(class='page  no-js', lang='ru')
         //- header
         +page-header()
             block nav
-        .banner    
+        .banner
+          .banner__inner
+            .banner__row
+              +splide('banner','banner')
+                block splide 
+                li.splide__slide 
+                  .splide__text В рейтинг Best Lawyers™ 2022 в&nbsp;России вошли 46 юристов «Пепеляев&nbsp;Групп»
+                  a.splide__link(href="#" aria-label="Читать новость" ) Читать новость
+                li.splide__slide 
+                  .splide__text В рейтинг Best Lawyers™ 2022 в&nbsp;России вошли 46 юристов «Пепеляев&nbsp;Групп»
+                  a.splide__link(href="#" aria-label="Читать новость") Читать новость 
+        .section-servise 
+          .container 
+            .row
+              .col-12 
+                h3.text-center Услуги
+              .col-xxl-6.col-xl-6.col-md-6
+                .servise-form 
+                  p.servise-form__title практики
+                   .dropdown
+                    .select 
+                      span Найдите нужную практику
+                    ul#practicleList.dropdown-menu
+                        input#practicleListListInputFilter.search-input(type="text" placeholder='Поиск практики')
+                        #practicleFilterClose.dropdown__close 
+                        li
+                          a.servise-form__link(href="" aria-label="COVID-19. Юр. поддержка бизнеса" ) COVID-19. Юр. поддержка бизнеса
+                        li 
+                          a.servise-form__link(href="" aria-label="Корпоративное право" ) Корпоративное право
+                        li 
+                          a.servise-form__link(href="" aria-label="Банкротство и антикризисная защита бизнеса" ) Банкротство и антикризисная защита бизнеса
+                        li 
+                          a.servise-form__link(href="" aria-label="Антимонопольное регулирование" ) Антимонопольное регулирование
+                  .servise-form__tags
+                    a.servise-form__tag(href="" aria-label="COVID-19. Юр. поддержка бизнеса" ) COVID-19. Юр. поддержка бизнеса
+                    a.servise-form__tag(href="" aria-label="Корпоративное право" ) Корпоративное право
+                    a.servise-form__tag(href="" aria-label="Банкротство и антикризисная защита бизнеса" ) Банкротство и антикризисная защита бизнеса
+                  a.servise-form__readmore.solid(href="" aria-label="Перейти к полному списку" ) Перейти к полному списку
+              .col-xxl-6.col-xl-6.col-md-6
+                 .servise-form 
+                  p.servise-form__title Отрасли
+                   .dropdown
+                    .select 
+                      span Найдите нужную отрасль
+                    ul#branchesList.dropdown-menu
+                        input#branchesListListInputFilter.search-input(type="text" placeholder='Поиск отрасли')
+                        #branchesFilterClose.dropdown__close 
+                        li
+                          a.servise-form__link(href="" aria-label="Здравоохранение" ) Здравоохранение
+                        li 
+                          a.servise-form__link(href="" aria-label="Цифровая экономика" ) Цифровая экономика
+                        li 
+                          a.servise-form__link(href="" aria-label="Энергетика" ) Энергетика
+                        li 
+                          a.servise-form__link(href="" aria-label="Экология" ) Экология
+                  .servise-form__tags
+                    a.servise-form__tag(href="" aria-label="Здравоохранение" ) Здравоохранение
+                    a.servise-form__tag(href="" aria-label="Цифровая экономика" ) Цифровая экономика
+                    a.servise-form__tag(href="" aria-label="Энергетика" ) Энергетика
+                    a.servise-form__tag(href="" aria-label="Экология" ) Экология
+                  a.servise-form__readmore.solid(href="" aria-label="Перейти к полному списку" ) Перейти к полному списку
         block content
           p содерddddddddжимое
 
  
 
     block page-bottom
+      script(src='js/splide.min.js')
       script(src='js/bundle.js')
