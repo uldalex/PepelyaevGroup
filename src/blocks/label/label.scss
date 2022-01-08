@@ -8,15 +8,16 @@
   margin: 0 0.1em;
   vertical-align: baseline;
   line-height: 1;
-  padding: 0.25em 0.4em 0.2em;
-  background-color: $gray-lightest;
-  color: $text-color;
+  padding: 6px;
+  background-color: #F5F7FA;
   text-decoration: none;
   text-transform: none;
-  font-weight: 700;
-  font-size: $font-size-sm;
-  white-space: nowrap;
-  border-radius: $border-radius;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height:140%;
+  border-radius: 0;
+  color:#838B98;
+  margin-bottom:10px;
 
   &:hover,
   &:focus {

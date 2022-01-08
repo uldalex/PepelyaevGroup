@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (servise)
+
+mixin servise(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +servise('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' servise--' + modsList[i].trim();
+      }
+    }
+
+  .servise(class=allMods)&attributes(attributes)
+    .servise__inner
+      block

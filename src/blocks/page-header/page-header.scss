@@ -54,8 +54,8 @@
             width:150%;
             max-height:0px;
             overflow:hidden;
-            top:100%;
-            background-color:#ffffff;
+            top:120%;
+            background-color:#F5F7FA;
             transition: all 0.3s linear;
             z-index:50;
             & ul {
@@ -89,7 +89,7 @@
             padding:0;
             }
             &:hover {
-                background-color:#ffffff;
+                background-color:#F5F7FA;
                 & a.main-nav__link--lvl-1 {
                     color: #92278f;
                 }
@@ -128,7 +128,7 @@
             }
         }
         &__sublist-wrapper--lvl-2 {
-            background-color: #ffffff;
+            background-color: #F5F7FA;
             width: 200%;
             max-height:0;
             overflow:hidden;
@@ -226,7 +226,7 @@
     &__launguage-link {
         padding-right:calc(1.8rem +17px);
         &:before {
-            right:17px;
+            right:0;
         }
     }
     & #lk {

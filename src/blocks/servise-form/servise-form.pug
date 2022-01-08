@@ -1,0 +1,44 @@
+//- Все примеси в этом файле должны начинаться c имени блока (servise-form)
+
+mixin servise-form(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +servise-form('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' servise-form--' + modsList[i].trim();
+      }
+    }
+
+  .servise-form(class=allMods)&attributes(attributes)
+    p.servise-form__title Отрасли
+    .dropdown
+      .select 
+        span Найдите нужную отрасль
+      ul#branchesList.dropdown-menu
+        input#branchesListListInputFilter.search-input(type="text" placeholder='Поиск отрасли')
+        #branchesFilterClose.dropdown__close 
+        li
+          a.servise-form__link(href="" aria-label="Здравоохранение" ) Здравоохранение
+        li 
+          a.servise-form__link(href="" aria-label="Цифровая экономика" ) Цифровая экономика
+        li 
+          a.servise-form__link(href="" aria-label="Энергетика" ) Энергетика
+        li 
+          a.servise-form__link(href="" aria-label="Экология" ) Экология
+    .servise-form__tags
+      a.servise-form__tag(href="" aria-label="Здравоохранение" ) Здравоохранение
+      a.servise-form__tag(href="" aria-label="Цифровая экономика" ) Цифровая экономика
+      a.servise-form__tag(href="" aria-label="Энергетика" ) Энергетика
+      a.servise-form__tag(href="" aria-label="Экология" ) Экология
+    .servise-form__footer
+      a.servise-form__readmore.solid(href="" aria-label="Перейти к полному списку" ) Перейти к полному списку
+    block

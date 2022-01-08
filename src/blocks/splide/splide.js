@@ -25,4 +25,17 @@ document.addEventListener( 'DOMContentLoaded', function() {
   } ); 
   splide.mount();
   }
+  if(document.getElementById("victory")) {
+    var banner =  document.getElementById('victory') 
+   
+    var splide = new Splide( banner, {
+      type   : 'loop',
+      perPage: 4,
+      autoplay:true,
+      pauseOnHover:true,
+      pauseOnFocus: true,
+      
+    } ); 
+    splide.mount();
+    }
 });
