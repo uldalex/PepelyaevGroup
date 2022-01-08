@@ -39,13 +39,26 @@ $('#search-close, #search-open').on('click', function(){
   return false;
 })
 /*Dropdown Menu*/
-$('.dropdown').on('click', function () {
+$('.dropdown').on('mouseenter', function () {
   $(this).addClass('active');
   $(this).find('.dropdown-menu').slideDown(300);
 });
 $('.dropdown').on('mouseleave', function () {
   $(this).removeClass('active');
   $(this).find('.dropdown-menu').slideUp(300);
+  $("#branchesListListInputFilter").val('');
+  $("#practicleListListInputFilter").val('');
+  $("#practicleFilterClose").removeClass('active');
+  $("#branchesFilterClose").removeClass('active');
+  var value = '';
+  $("#practicleList li").filter(function() {
+    let item = $(this).text().toLowerCase().indexOf(value) > -1;
+    $(this).toggle(item);
+  });
+  $("#branchesList li").filter(function() {
+    let item = $(this).text().toLowerCase().indexOf(value) > -1;
+    $(this).toggle(item);
+  });
 });
 $('.dropdown .dropdown-menu li').click(function () {
   $(this).parents('.dropdown').find('span').text($(this).text());
