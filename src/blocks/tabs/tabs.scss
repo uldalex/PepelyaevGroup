@@ -14,15 +14,17 @@
     flex-wrap: wrap;
     align-items: flex-end;
     margin: 0;
+    margin-bottom:30px;
     padding: 0;
     list-style: none;
+    color:#838B98;
 
     &:after {
       content: '';
       display: none;
       flex-grow: 1;
       height: 1px;
-      background-color: $border-color;
+      background-color: transparent;
 
       @media (min-width: $screen-md) {
         display: block;
@@ -37,8 +39,8 @@
   &__link-wrap {
     position: relative;
     margin: 0 0.3em 0.3em 0;
-    border: 1px solid $border-color;
-    color: $text-color-muted;
+    border-bottom: 3px solid transparent;
+    transition:all 0.3s linear;
 
     @media (min-width: $screen-md) {
       margin: 0;
@@ -49,35 +51,38 @@
     }
 
     &--active {
-      color: $text-color;
+      color: #92278F;
 
       @media (min-width: $screen-md) {
-        border-bottom: 1px solid transparent;
+        border-bottom: 3px solid #92278F;
       }
 
       #{$block-name}__link {
-        background-color: #fff;
+
       }
     }
   }
 
   &__link {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
+    padding:5px 20px;
     color: currentColor;
     text-decoration: none;
-    background-color: $gray-lightest;
+
 
     &:hover,
+     {
+      color: #92278F;
+    }
     &:focus {
-      color: currentColor;
+      color: #6F196C;
     }
   }
 
   &__content-wrapper {
     display: block;
-    border: 1px solid $border-color;
-    padding: $field-padding-vertical $field-padding-horizontal;
+   
+    padding: 0;
 
     @media (min-width: $screen-md) {
       border-top: none;

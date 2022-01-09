@@ -203,10 +203,208 @@ html(class='page  no-js', lang='ru')
             .row
               .block-rete  
                 h3 PEPELIAEV GROUP — Лидер международных рейтингов
-                ul.block-rete__list
+                ul#logo-list.block-rete__list
                   li 
-                   img(src="img/logos/logo2jpg" decoding="async" loading="lazy"   width="320" height="320" alt="Право-300")
-
+                   img(src="img/logos/logo2.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p Право-300
+                  li 
+                   img(src="img/logos/logo3.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p The Legal 500
+                  li 
+                   img(src="img/logos/logo13.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p Chambers Europe
+                  li  
+                   img(src="img/logos/logo13.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p Chambers Global
+                  li 
+                   img(src="img/logos/logo12.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p WTR 1000
+                  li  
+                   img(src="img/logos/logo10.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p World Tax & TP
+                  li 
+                   img(src="img/logos/logo4.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p IFLR 1000
+                  li  
+                   img(src="img/logos/logo8.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p Best Lawyers™
+                  li 
+                   img(src="img/logos/logo2.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p Право-300
+                  li 
+                   img(src="img/logos/logo3.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p The Legal 500
+                  li   
+                   img(src="img/logos/logo13.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p Chambers Europe
+                  li  
+                   img(src="img/logos/logo13.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p Chambers Global
+                  li 
+                   img(src="img/logos/logo12.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p WTR 1000
+                  li
+                   img(src="img/logos/logo10.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p World Tax & TP
+                  li  
+                   img(src="img/logos/logo4.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p IFLR 1000
+                  li
+                   img(src="img/logos/logo8.jpg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
+                   p Best Lawyers™
+        .section-events 
+          .container
+            h3.text-center Мероприятия 
+            +splide('events','events')
+                block splide 
+                li.splide__slide
+                  .event-card
+                    .event-card__wrapper 
+                      .event-card__header 
+                        .event-card__date 10 января 2022 
+                        +label('Москва')
+                      .event-card__content V Международный медицинский инвестиционный форум
+                li.splide__slide
+                  .event-card
+                    .event-card__wrapper 
+                      .event-card__header 
+                        .event-card__date 14 января 2022 
+                        +label('Онлайн')
+                      .event-card__content Переходим на ЭДО: что должен учесть работодатель?
+                li.splide__slide
+                  .event-card
+                    .event-card__wrapper 
+                      .event-card__header 
+                        .event-card__date 15 января 2022 
+                        +label('Онлайн')
+                      .event-card__content Правовой режим линейного объекта: гражданское право и налоги 
+                li.splide__slide
+                  .event-card
+                    .event-card__wrapper 
+                      .event-card__header 
+                        .event-card__date 10 января 2022 
+                        +label('Москва')
+                      .event-card__content V Международный медицинский инвестиционный форум
+                li.splide__slide
+                  .event-card
+                    .event-card__wrapper 
+                      .event-card__header 
+                        .event-card__date 14 января 2022 
+                        +label('Онлайн')
+                      .event-card__content Переходим на ЭДО: что должен учесть работодатель?
+                li.splide__slide
+                  .event-card
+                    .event-card__wrapper 
+                      .event-card__header 
+                        .event-card__date 15 января 2022 
+                        +label('Онлайн')
+                      .event-card__content Правовой режим линейного объекта: гражданское право и налоги 
+                li.splide__slide
+                  .event-card
+                    .event-card__wrapper 
+                      .event-card__header 
+                        .event-card__date 10 января 2022 
+                        +label('Москва')
+                      .event-card__content V Международный медицинский инвестиционный форум
+                li.splide__slide
+                  .event-card
+                    .event-card__wrapper 
+                      .event-card__header 
+                        .event-card__date 14 января 2022 
+                        +label('Онлайн')
+                      .event-card__content Переходим на ЭДО: что должен учесть работодатель?
+                li.splide__slide
+                  .event-card
+                    .event-card__wrapper 
+                      .event-card__header 
+                        .event-card__date 15 января 2022 
+                        +label('Онлайн')
+                      .event-card__content Правовой режим линейного объекта: гражданское право и налоги 
+            .col.text-center 
+              a.btn(href="#" aria-label="Все мероприятия") Все мероприятия
+        .section-news 
+          .container
+            h3.text-center Новости и аналитика «Пепеляев Групп»         
+            +tabs([
+                {
+                  'id': 'tab00',
+                  'text': 'Все новости',
+                  'isActive': true,
+                },
+                {
+                  'id': 'tab01',
+                  'text': 'Пресс-релизы',
+                },
+                {
+                  'id': 'tab02',
+                  'text': 'Аналитика',
+                },
+                {
+                  'id': 'tab03',
+                  'text': 'Видео',
+                },
+                {
+                  'id': 'tab04',
+                  'text': 'Книги',
+                },
+                ], 'some-mod')
+                +tabs-item('tab00', true, 'some-mod')
+                  +splide('news','news')
+                    block splide 
+                    li.splide__slide
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('Статья')
+                          .event-card__content Президент подписал указ о внесении поправок в Конституцию, которые вступили в силу с 4 июля
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('Алерт')
+                          .event-card__content Рабочая группа по подготовке поправок к Конституции займется реформой всего законодательства
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('Обзор')
+                          .event-card__content Разработан законопроект, облегчающий доступ к льготным ставкам налогов при выплатах за рубеж
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                    li.splide__slide
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('Статья')
+                          .event-card__content Президент подписал указ о внесении поправок в Конституцию, которые вступили в силу с 4 июля
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('Алерт')
+                          .event-card__content Рабочая группа по подготовке поправок к Конституции займется реформой всего законодательства
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('Обзор')
+                          .event-card__content Разработан законопроект, облегчающий доступ к льготным ставкам налогов при выплатах за рубеж
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                +tabs-item('tab01')
+                  p За словесными горами в стране, гласных и согласных живут рыбные тексты.1
+                +tabs-item('tab02')
+                  p Словесными горами в стране, гласных и согласных живут рыбные тексты.2
+                +tabs-item('tab03')
+                  p Горами в стране, гласных и согласных живут рыбные тексты.3
+                +tabs-item('tab04')
+                  p Горами в стране, гласных и согласных живут рыбные тексты.3
+          .col.text-center 
+            a.btn(href="#" aria-label="Подписаться на рассылку") Подписаться на рассылку
         block content
           p содерddddddddжимое
 
