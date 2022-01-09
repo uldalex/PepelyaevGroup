@@ -938,14 +938,80 @@ min-height:100%;
 
   }
 }
-// юблок рейтинга
+// блок рейтинга
 
 .block-rete {
 margin-top: 35px;
+position:relative;
+max-width:100%; 
+overflow:hidden;
+height:250px;
+margin-bottom:100px;
+
+&:before {
+  content: '';
+    position: absolute;
+    background: #bfdbff;
+    filter: blur(50px);
+    transform: translate(-20px,-20px);
+    width: 70%;
+    height: 50px;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+  &:after {
+    content: '';
+    position: absolute;
+    background: #ecc7eb;
+    width: 50%;
+    height: 50px;
+    filter: blur(50px);
+    transform: translate(35%, 10px);
+    top:120px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
 
 & h3 {
   text-transform: none;
   color:#92278F;
   font-size:1.1rem;
 }
+&__list {
+  position: relative;
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: space-between;
+  padding:0;
+  margin:0;
+  padding-bottom:20px;
+  overflow-x:scroll;
+  
+   & li {
+     list-style: none;
+     text-align: center;
+     min-width:10.5vw;
+
+     & img {
+       width:100px;
+       height:100px;
+       position: relative;
+       z-index: 5;
+  }
+   & p {
+     margin-top:15px;
+     color: #838B98;
+   }
+   }
+
+  }
+}
+// блок мероприятий
+.section-events {
+  margin-top:100px;
+  
 }
