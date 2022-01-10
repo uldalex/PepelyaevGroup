@@ -265,9 +265,15 @@ h3 {
   & span {
     display: block;
     font-size:25px;
+  }
+  @media(max-width:600px){
+    font-size:26px;
+    & span {
+      font-size:22px;
+    }
+  }
+}
 
-}
-}
 .width-gradient {
   position:relative;
 
@@ -454,6 +460,9 @@ pre {
 .col-2{
   @include col(xs, 2);
   }
+  .col-6{
+    @include col(xs, 6,  $grid-columns, 10px );
+    }
 .col-xs-6 {
   @include col(xs, 6, $grid-columns, 10px);
 }
@@ -648,6 +657,7 @@ pre {
    }
    @media(max-width:600px){
     margin-top:-10px;
+    min-height:100vh;
    }
 
    &__inner {
@@ -801,6 +811,12 @@ pre {
   @media(max-width:768px){
     margin-top:30px;
   }
+  @media(max-width:600px){
+    & .row {
+      margin-left:-15px;
+      margin-right:-15px;
+    }
+  }
 
 }
 .servise-form {
@@ -810,6 +826,10 @@ pre {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media(max-width:600px){
+    min-height:100px;
+    margin-bottom:30px;
+  }
 
   &__title {
     font-weight: 300;
@@ -878,6 +898,15 @@ pre {
     &:hover {
       background-color: #6F196C;
     }
+    @media(max-width:350px){
+      display:block;
+      padding:15px 0;
+      width:100%;
+      margin-left:-15px;
+      margin-right:-15px;
+      width: calc(100% + 30px);
+      min-width: calc(100% + 30px);
+    }
   }
 }
 .victory-card {
@@ -902,6 +931,9 @@ pre {
  &__content {
    margin-top:5px;
    margin-bottom:100px;
+   @media(max-width:600px){
+     margin-bottom:30px;
+   }
  }
 
  &__footer {
@@ -937,6 +969,9 @@ pre {
     font-weight:500;
     color: #ECC7EB;
     margin-bottom:15px;
+    @media(max-width:600px){
+      font-size:35px;
+    }
   }
 
 }
@@ -944,6 +979,9 @@ pre {
 position:relative;
 display:block;
 min-height:100%;
+@media(max-width:600px){
+margin-top:20px;
+}
 
 &:after {
   content:'';
@@ -955,6 +993,10 @@ min-height:100%;
   background-color:rgba(146, 39, 143, 0);
   border-radius:50%;
   animation: pulse-black 4s infinite;
+  @media(max-width:600px){
+    top:20%;
+    left:50%;
+  }
 }
 @keyframes pulse-black {
   0% {
@@ -978,9 +1020,13 @@ min-height:100%;
   width:140%;
   height:auto;
   transition:all 0.5s linear;
-  @media(max-width:768px){
+  @media(max-width:768px)and(min-width:600px){
     width:120%;
     margin-top:2rem;
+  }
+  @media(max-width:600px){
+    width:100%;
+    position:relative;
   }
   }
 
@@ -1095,8 +1141,11 @@ height:250px;
      @media(max-width:1024px)and(min-width:768px){
        min-width:13.5vw;
      }
-     @media(max-width:768px){
+     @media(max-width:768px)and(min-width:600px){
        min-width:140px;
+     }
+     @media(max-width:600px){
+      min-width:33%;
      }
 
      & img {
@@ -1116,8 +1165,13 @@ height:250px;
 // блок мероприятий
 .section-events {
   margin-top:100px;
+  padding-top:100px;
+  padding-bottom:100px;
+  background-color:#F5F7FA;
   @media(max-width:768px){
     margin-top:50px;
+    padding-top:50px;
+    padding-bottom:50px;
   }
   & .btn {
     background-color: #92278F;
@@ -1127,6 +1181,16 @@ height:250px;
     transition: background-color 0.3s linear;
     &:hover {
       background-color: #6F196C;
+      
+    }
+    @media(max-width:350px){
+      display:block;
+      padding:15px 0;
+      width:100%;
+      margin-left:-15px;
+      margin-right:-15px;
+      width: calc(100% + 30px);
+      min-width: calc(100% + 30px);
     }
   }
 }
@@ -1137,6 +1201,9 @@ height:250px;
   padding:1px;
   background-image: linear-gradient(261deg, rgba(168, 51, 168, 0.4)20%,rgba(168, 51, 168, 0.3)40%,  rgba(127, 166, 216, 0.6)70%,  rgba(127, 166, 216, 0.4)100%);
   margin: 0 1rem;
+  @media(max-width:600px){
+    margin:0 1px;
+  }
 
 
   &__wrapper {
@@ -1153,14 +1220,21 @@ height:250px;
     display:flex;
     align-items: flex-start;
     justify-content: space-between;
+    @media(max-width:350px){
+      align-items: center; 
+    }
   }
   &__date {
     font-size:20px;
     text-transform: uppercase;
     font-weight:300;
+    @media(max-width:350px){
+      font-size: 16px;
+    }
   }
   & .label {
     font-weight:400;
+    white-space: nowrap;
   }
   &__content {
     font-weight:500;
@@ -1198,9 +1272,15 @@ height:250px;
     min-width:300px;
     width:33%;
     background-image: none;
-    @media(max-width:1024px){
+    @media(max-width:1024px)and(min-width:600px){
       min-width: 30%;
       width:30%;
+    }
+    @media(max-width:600px){
+      min-width: 100%;
+      width:100%;
+      min-height: 50px;
+      margin:0.8rem 0;
     }
    &:last-child{
       margin-right:0;
@@ -1226,13 +1306,19 @@ height:250px;
       width:20%;
     }
 
-    @media(max-width:768px){
+    @media(max-width:768px)and(min-width:600px){
       min-width: 50%;
       width:50%;
       min-height: 100px;
       margin-bottom:1rem;
       margin-left:0;
       margin-right:0;
+    }
+    @media(max-width:600px){
+      min-width:100%;
+      width:100%;
+      min-height: 100px;
+      margin: 0.5rem 0;
     }
 
     & .event-card__perw {
@@ -1316,6 +1402,10 @@ height:250px;
     transition: background-color 0.3s linear;
     &:hover {
       background-color: #6F196C;
+    }
+    @media(max-width:350px){
+      display:block;
+      padding:15px 0;
     }
   }
 }

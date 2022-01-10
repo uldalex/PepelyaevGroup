@@ -8,16 +8,32 @@
 
   margin-top: $typo-margin-vertical;
   margin-bottom: $typo-margin-vertical;
+  width:100%;
+  overflow:hidden;
 
   &__links {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: flex-end;
     margin: 0;
     margin-bottom:30px;
     padding: 0;
     list-style: none;
     color:#838B98;
+    @media(max-width:600px){
+      overflow-y: scroll;
+      padding-bottom: 10px;
+      scrollbar-width: thin;          
+      scrollbar-color: #92278F #F5F7FA;  
+    }
+    
+    .dropdown-menu ul::-webkit-scrollbar-track {
+      background: #F5F7FA;        /* color of the tracking area */
+    }
+    
+    .dropdown-menu ul::-webkit-scrollbar-thumb {
+      background-color: #92278F;    /* color of the scroll thumb */
+    }
 
     &:after {
       content: '';
@@ -52,9 +68,9 @@
 
     &--active {
       color: #92278F;
-
-      @media (min-width: $screen-md) {
         border-bottom: 3px solid #92278F;
+      @media (min-width: $screen-md) {
+
       }
 
       #{$block-name}__link {
@@ -68,6 +84,7 @@
     padding:5px 20px;
     color: currentColor;
     text-decoration: none;
+    white-space: nowrap;
 
 
     &:hover{

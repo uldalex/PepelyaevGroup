@@ -120,6 +120,28 @@ $("#branchesListListInputFilter").on("keyup", function() {
   });
 });
 /*End Dropdown Menu*/
+//меню
+if ($(window).width() <= 600) {
+$('.main-nav__item--has-child').on('click', function(){
+  $(this).toggleClass('open');
+  $(this).find('.main-nav__sublist-wrapper').toggleClass('open');
+  return false;
+})
+}
+var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
+$('.page__content').bind(mousewheelevt, function(e){
+
+    var evt = window.event || e //equalize event object     
+    evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
+    var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
+
+    if(delta > 0) {
+      $('.page__header').addClass('fixed')   
+    }
+    else{
+      $('.page__header').removeClass('fixed')   
+    }   
+});
 //анимация
 $(window).scroll(function(){
 	var wt = $(window).scrollTop();

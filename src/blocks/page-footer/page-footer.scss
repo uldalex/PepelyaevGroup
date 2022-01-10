@@ -7,10 +7,20 @@
      color:#ffffff;
      margin-top:100px;
      padding:50px 0;
+    position: relative;
+    @media(max-width:600px){
+        padding-bottom: 170px;
+        & p {
+            width: 70%;
+            line-height: 180%;
+        }
+    }
+
      & a {
          color: #ffffff;
          font-size:1.05rem;
          font-weight:400;
+         
      &.page-footer__small {
             font-size:0.9rem;
         }    
@@ -20,12 +30,22 @@
      &:focus, &:active {
         color: #6F196C;
      }
+     &.logo{
+         @media(max-width:600px){
+            display: block;
+            margin: 0 auto 20px;
+         }
+     }
      } 
     &__inner {
         @include container();
     }
     &__row {
         @include row();
+        @media(max-width:600px){
+        margin-left:0;
+        margin-right:0; 
+        } 
     }
 
     &__tehnical-info {
@@ -36,6 +56,10 @@
             color: #838B98;
             font-size:0.9rem;
         }
+        @media(max-width:600px){
+            position:absolute;
+            bottom:50px;
+        }
     }
 
     & ul {
@@ -45,14 +69,27 @@
         & li {
             list-style:none;
             margin-bottom:15px;
+            @media(max-width:600px){
+                margin-bottom:20px;
+            }
         }
     }
     &__feedback {
         margin-top:20px;
+        @media(max-width:600px){
+            margin-top:0px;    
+        }
     }
     &__sotial {
         display:flex;
         margin-top:20px;
+        @media(max-width:600px){
+            flex-direction: column;
+            margin-top:0px;
+            & span {
+                margin-bottom:20px;
+            }
+        }
 
         & span {
             display:block;
@@ -63,6 +100,12 @@
     &__contacts {
         display:flex;
         justify-content: space-between;
+        @media(max-width:600px){
+            flex-direction: column;
+            & a {
+                margin-bottom:20px;
+            }
+        }
     }
     &__links {
         margin-top:10px;
@@ -109,5 +152,10 @@
     & .copyright {
         margin-top:30px;
         color:#838B98;
+        @media(max-width:600px){
+            position:absolute;
+            bottom:30px;
+            left:15px;
+        }
     }
 }
