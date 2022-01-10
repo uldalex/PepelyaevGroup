@@ -57,16 +57,64 @@ document.addEventListener( 'DOMContentLoaded', function() {
         autoplay:false,
         pauseOnHover:true,
         pauseOnFocus: true,
-        arrows:false,
-        breakpoints: {
-          768: {
-            perPage: 2,
-          },
-          480: {
-            perPage: 1,
-          },
-          }
+        arrows:true,
       }); 
       splide.mount();
       }
+      if(document.getElementById("press-relise")) {
+        var banner =  document.getElementById('press-relise') 
+       
+        var splide = new Splide( banner, {
+          type   : 'loop',
+          perPage: 1,
+          perMove: 1,
+          autoplay:false,
+          pauseOnHover:true,
+          pauseOnFocus: true,
+          arrows:true,
+        }); 
+        splide.mount();
+        }
+        if(document.getElementById("analitic")) {
+          var banner =  document.getElementById('analitic') 
+         
+          var splide = new Splide( banner, {
+            type   : 'loop',
+            perPage: 1,
+            perMove: 1,
+            autoplay:false,
+            pauseOnHover:true,
+            pauseOnFocus: true,
+            arrows:true,
+          }); 
+          splide.mount();
+          }
+          if(document.getElementById("video")) {
+            var banner =  document.getElementById('video') 
+           
+            var splide = new Splide( banner, {
+              type   : 'loop',
+              perPage: 1,
+              perMove: 1,
+              autoplay:false,
+              pauseOnHover:true,
+              pauseOnFocus: true,
+              arrows:true,
+            }); 
+            splide.mount();
+            }
+            if(document.getElementById("books")) {
+              var banner =  document.getElementById('books') 
+             
+              var splide = new Splide( banner, {
+                type   : 'loop',
+                perPage: 1,
+                perMove: 1,
+                autoplay:false,
+                pauseOnHover:true,
+                pauseOnFocus: true,
+                arrows:true,
+              }); 
+              splide.mount();
+              }
 });

@@ -6,6 +6,10 @@
     color:#272C3E;
     padding-top:1rem;
     font-size: 1.07rem;
+    @media(max-width:600px){
+        position:relative;
+        padding-top: 0.5rem;
+    }
 
     &__inner {
         @include container();
@@ -20,6 +24,9 @@
     & a {
         color: #272C3E;
         font-size:1.07rem;
+        @media(max-width:768px){
+            font-size:1rem;
+        }
         &.page-header__search-close {
             position: absolute;
             right: 0;
@@ -45,9 +52,32 @@
             position:relative;
             list-style:none;
             padding:0 1.8rem;
+            @media(max-width:768px){
+                padding:0 1.2rem;
+            }
+        }
+    }
+    &__left-part{
+        @media(max-width:600px){
+            order:2;
+            & li {
+                position:absolute;
+                top:60px;
+                left:0;
+            }
+            & li:first-child {display:none}
         }
     }
     &__right-part {
+        & li {
+            @media(max-width:600px){
+                display:none;
+                &.page-header__launguage-link {
+                    display:block;
+                }
+            }
+        
+        }
         & .launguage-panel, & .user-panel  {
             position:absolute;
             left: -10%;
@@ -58,12 +88,18 @@
             background-color:#F5F7FA;
             transition: all 0.3s linear;
             z-index:50;
+            @media(max-width:600px){
+                width:200%;
+              }
             & ul {
                 flex-direction: column;
                 padding:7px 0;
 
                 & li {
                   padding: 7px 7px 7px 15px;
+                  @media(max-width:600px){
+                    display:block;
+                  }
 
                   &:hover {
                     & a {
@@ -75,6 +111,7 @@
 
             &.open {max-height:400px;}
         }
+
     }
     & .main-nav {
         margin-top:14.5px;
@@ -105,7 +142,10 @@
             }
             }
             &--has-child {
-            padding:25px 25px 10px 20px;   
+            padding:25px 25px 10px 20px; 
+            @media(max-width:768px){
+                padding: 25px 20px 10px 0px;
+            }  
                 
                 &:after {
                     content:'';
@@ -292,3 +332,101 @@
     }       
 
 }
+.off-canvas {
+
+    $block-name:                &; // #{$block-name}__element
+  
+    position: relative;
+    overflow: hidden;
+  
+    .js &--open {
+  
+      #{$block-name}__overlay {
+        position: fixed;
+        z-index: 1;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity $transition-time ease;
+      }
+  
+      #{$block-name}__close {
+        z-index: 1;
+        opacity: 1;
+        visibility: visible;
+      }
+  
+      #{$block-name}__aside {
+        transform: translateX(0);
+      }
+  
+      #{$block-name}__page-content {
+        transform: translateX(200px);
+      }
+    }
+  
+    &__aside {
+      max-height: 30vh;
+      overflow-y: auto;
+      backface-visibility: hidden;
+      background-color: $gray-darkest;
+      color: #fff;
+      transition: transform $transition-time ease;
+  
+      .js & {
+        position: fixed;
+        z-index: 2;
+        width: 200px;
+        height: 100%;
+        max-height: none;
+        transform: translateX((200px * -1));
+      }
+    }
+  
+    &__menu {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    &__menu-item {
+  
+      &--separator {
+        padding-bottom: 10px;
+        border-bottom: 1px solid $gray;
+        margin-bottom: 10px;
+      }
+    }
+  
+    &__menu-link {
+      display: block;
+      padding: 8px 14px;
+      line-height: 1.2;
+      color: inherit;
+      text-decoration: none;
+  
+      &:hover,
+      &:focus {
+        color: inherit;
+        text-decoration: none;
+        background-color: $gray-darker;
+      }
+    }
+  
+    &__page-content {
+      backface-visibility: hidden;
+      transition: transform $transition-time ease;
+    }
+  
+    &__overlay {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  

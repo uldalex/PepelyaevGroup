@@ -177,7 +177,6 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                   <code>              a(href="mailto:info@pgplaw.ru" aria-label="написать") info@pgplaw.ru</code>
                   <code>        +logo('/')</code>
                   <code>          img(src='img/logo.svg', alt='Logo', width='126', height='36')</code>
-                  <code>        +burger('Показать содержание', 'nav', 'main-nav--open')(class='main-nav__toggler')</code>
                   <code>        .page-header__right-part </code>
                   <code>          ul.page-header__list</code>
                   <code>            li </code>
@@ -236,7 +235,8 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                   <code>                      a(href="#" aria-label="Личный кабинет") Личный кабинет</code>
                   <code>                    li</code>
                   <code>                      a(href="#" aria-label="Выход") Выйти</code>
-                  <code>      </code>
+                  <code>        +burger('Показать содержание', 'nav', 'main-nav--open')(class='main-nav__toggler')</code>
+                  <code>&nbsp;</code>
                   <code>      block</code>
                 </pre>
               </div>
@@ -272,7 +272,8 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                   <code>&nbsp;</code>
                   <code>  footer.page-footer(class=allMods, role='contentinfo')&attributes(attributes)</code>
                   <code>    .page-footer__inner</code>
-                  <code>      block</code>
+                  <code>      .page-footer__row</code>
+                  <code>        block</code>
                 </pre>
               </div>
             </div>

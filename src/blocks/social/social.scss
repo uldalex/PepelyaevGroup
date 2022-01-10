@@ -20,13 +20,16 @@
 
   &__link {
     display: block;
-    padding: 5px;
-    background-color: $gray;
+    padding: 0px;
+    width:25px;
+    height:25px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:all 0.3s linear;
 
-    #{$block-name}__link-wrap--fb & {
-      background-color: $color-fb;
-    }
-
+  
     // #{$block-name}__link-wrap--vk & {
     //   background-color: $color-vk;
     // }
@@ -41,9 +44,22 @@
 
     svg {
       display: block;
-      width: 16px;
-      height: 16px;
-      fill: #fff;
+      width: 18px;
+      height: 18px;
+      fill: #272C3E;
+    }
+    &:hover {
+      background-color: #92278F;
+
+      & svg {
+        fill: #ffffff
+      }
+    }
+    &:focus, &:active {
+      background-color: #6F196C;
+      & svg {
+        fill: #ffffff
+      }
     }
   }
 

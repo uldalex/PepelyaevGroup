@@ -28,7 +28,6 @@ mixin page-header(mods)
               a(href="mailto:info@pgplaw.ru" aria-label="написать") info@pgplaw.ru
         +logo('/')
           img(src='img/logo.svg', alt='Logo', width='126', height='36')
-        +burger('Показать содержание', 'nav', 'main-nav--open')(class='main-nav__toggler')
         .page-header__right-part 
           ul.page-header__list
             li 
@@ -87,5 +86,6 @@ mixin page-header(mods)
                       a(href="#" aria-label="Личный кабинет") Личный кабинет
                     li
                       a(href="#" aria-label="Выход") Выйти
-      
+        +burger('Показать содержание', 'nav', 'main-nav--open')(class='main-nav__toggler')
+
       block

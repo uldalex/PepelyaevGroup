@@ -451,6 +451,9 @@ pre {
 .col{
 @include col();
 }
+.col-2{
+  @include col(xs, 2);
+  }
 .col-xs-6 {
   @include col(xs, 6, $grid-columns, 10px);
 }
@@ -631,12 +634,21 @@ pre {
   }
 //баннер
  .banner {
+   position:relative;
+   overflow:hidden;
+   width:100%;
    min-height:600px;
    background-image:url('../img/bg.svg');
    background-size:cover;
    background-position:center;
    margin-top:-55px;
    display:flex;
+   @media(max-width:1024px){
+    min-height:400px;
+   }
+   @media(max-width:600px){
+    margin-top:-10px;
+   }
 
    &__inner {
      @include container();
@@ -646,6 +658,23 @@ pre {
     display:flex;
     min-height:100%;
     padding-left:25px;
+   }
+   & .animate {
+    position: absolute;
+    left: 40%;
+    width:80%;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index:0;
+    @media(max-width:1300px){ 
+    left: 50%;
+    width: 60%;
+    }
+    @media(max-width:600px){
+      display:none;
+    }
    }
  }
 
@@ -765,17 +794,13 @@ pre {
     padding: 0;
     list-style: none
 }
-.dropdown .dropdown-menu li:hover {
-
-}
-.dropdown .dropdown-menu li:active {
-
-}
-
 
 //servise  
 .section-servise {
   margin-top:100px;
+  @media(max-width:768px){
+    margin-top:30px;
+  }
 
 }
 .servise-form {
@@ -841,7 +866,9 @@ pre {
 //victory
 .section__victory {
   margin-top:100px;
-
+  @media(max-width:768px){
+    margin-top:30px;
+  }
   & .btn {
     background-color: #92278F;
     color:#ffffff;
@@ -858,7 +885,10 @@ pre {
   min-height:100%;
   padding:1px;
  background-image: linear-gradient(261deg, rgba(168, 51, 168, 0.4)20%,rgba(168, 51, 168, 0.3)40%,  rgba(127, 166, 216, 0.6)70%,  rgba(127, 166, 216, 0.4)100%);;
-
+@media(max-width:768px){
+  min-height: calc(100% - 1rem);
+  margin-bottom:1rem;
+}
  &__wrapper {
    padding:25px;
    background-color: #ffffff;
@@ -878,15 +908,29 @@ pre {
    & a {
      color:#838B98;
      border-color: #838B98;
+     &:hover {
+      color: #92278F;
+      border-bottom-color: #92278F;
+    }
+    &:focus, &:active {
+      color: #6F196C;
+      border-bottom-color: #6F196C;
+    }
    }
  }
 }
 /*счетчик*/
 .block-counter {
   margin-top:100px;
+  @media(max-width:768px){
+    margin-top:30px;
+  }
 }
 .counter {
 
+  @media(max-width:768px){
+    margin-top:2rem;
+  }
   &__numbers {
     font-size:45px;
     line-height:59px;
@@ -894,19 +938,52 @@ pre {
     color: #ECC7EB;
     margin-bottom:15px;
   }
+
 }
 .map-container {
 position:relative;
 display:block;
 min-height:100%;
 
+&:after {
+  content:'';
+  position:absolute;
+  top:30%;
+  left:30%;
+  width:20px;
+  height:20px;
+  background-color:rgba(146, 39, 143, 0);
+  border-radius:50%;
+  animation: pulse-black 4s infinite;
+}
+@keyframes pulse-black {
+  0% {
+    transform: scale(0);
+    box-shadow: 0 0 0 0 rgba(146, 39, 143, 0.385);
+  }
+  
+  90% {
+    transform: scale(3);
+    box-shadow: 0 0 0 40px rgba(146, 39, 143, 0);
+  }
+  
+  100% {
+    transform: scale(0);
+    box-shadow: 0 0 0 0 rgba(146, 39, 143, 0);
+  }
+}
 & svg {
   position:absolute;
   right:0;
   width:140%;
   height:auto;
   transition:all 0.5s linear;
+  @media(max-width:768px){
+    width:120%;
+    margin-top:2rem;
   }
+  }
+
   & span {
     display: block;
     position: absolute;
@@ -935,7 +1012,9 @@ min-height:100%;
       & span {
         opacity:1;
       }
-
+  &:after {
+    display:none;
+  }
   }
 }
 // блок рейтинга
@@ -989,11 +1068,36 @@ height:250px;
   margin:0;
   padding-bottom:20px;
   overflow-x:scroll;
+  scrollbar-width: thin;          
+  scrollbar-color: #92278F #F5F7FA;  
+
+&::-webkit-scrollbar {
+  width: 4px; 
+  border-radius:4px;             
+}
+
+&::-webkit-scrollbar-track {
+  background: #F5F7FA; 
+  border-radius:4px;     
+}
+
+&::-webkit-scrollbar-thumb {
+  background-color: #92278F;  
+  border-radius: 0px;       
+  border: 2px solid #92278F; 
+  border-radius:4px;
+}
   
    & li {
      list-style: none;
      text-align: center;
      min-width:10.5vw;
+     @media(max-width:1024px)and(min-width:768px){
+       min-width:13.5vw;
+     }
+     @media(max-width:768px){
+       min-width:140px;
+     }
 
      & img {
        width:100px;
@@ -1012,7 +1116,9 @@ height:250px;
 // блок мероприятий
 .section-events {
   margin-top:100px;
-  
+  @media(max-width:768px){
+    margin-top:50px;
+  }
   & .btn {
     background-color: #92278F;
     color:#ffffff;
@@ -1024,12 +1130,14 @@ height:250px;
     }
   }
 }
+
 .event-card {
   display:flex;
   min-height:100%;
   padding:1px;
   background-image: linear-gradient(261deg, rgba(168, 51, 168, 0.4)20%,rgba(168, 51, 168, 0.3)40%,  rgba(127, 166, 216, 0.6)70%,  rgba(127, 166, 216, 0.4)100%);
   margin: 0 1rem;
+
 
   &__wrapper {
   padding:25px;
@@ -1079,11 +1187,21 @@ height:250px;
     &:first-child{
       margin-left:0;
     }
- 
+  &__avtor {
+    color: #838B98;
+    margin-bottom: 15px;
+  }
+  &__price {
+    color: #838B98;
+  }
   &--news {
     min-width:300px;
     width:33%;
     background-image: none;
+    @media(max-width:1024px){
+      min-width: 30%;
+      width:30%;
+    }
    &:last-child{
       margin-right:0;
     }
@@ -1100,11 +1218,95 @@ height:250px;
       line-height: 150%;
     }
   }
+  &--video {
+    width:25%;
+    background-image: none;
+    @media(max-width:1024px)and(min-width:768px){
+      min-width: 22%;
+      width:20%;
+    }
+
+    @media(max-width:768px){
+      min-width: 50%;
+      width:50%;
+      min-height: 100px;
+      margin-bottom:1rem;
+      margin-left:0;
+      margin-right:0;
+    }
+
+    & .event-card__perw {
+      & img {
+        width:100%;
+      }
+    }
+    & .event-card__wrapper {
+      padding:0;
+      @media(max-width:768px){
+        width:100%;
+        padding-right:1rem;
+      }
+      }
+    & .event-card__content {
+      margin-top:15px;
+      }
+    & a {
+      color: #272C3E;
+      &:hover {
+        color: #92278F;
+      }
+      &:focus, &:active {
+        color: #6F196C;
+      }
+    }
+  }
+  &--book {
+    width:25%;
+    background-image: none;
+    @media(max-width:1024px)and(min-width:768px){
+      min-width: 22%;
+      width:20%;
+    }
+
+    @media(max-width:768px){
+      min-width: 50%;
+      width:50%;
+      min-height: 100px;
+      margin-bottom:1rem;
+      margin-left:0;
+      margin-right:0;
+    }
+    
+    & .event-card__wrapper {
+      padding:0;
+      }
+      & .event-card__perw {
+          height:200px;
+          & img {
+            max-height:200px;
+          }
+      }
+    & .event-card__content {
+      margin-top:15px;
+      }
+    & a {
+      color: #272C3E;
+      &:hover {
+        color: #92278F;
+      }
+      &:focus, &:active {
+        color: #6F196C;
+      }
+    }
+  }
 }
 
 // блок новости и аналитика
 .section-news {
   margin-top:100px;
+  @media(max-width:768px){
+    margin-top:50px;
+  }
   
   & .btn {
     background-color: #92278F;
@@ -1117,3 +1319,18 @@ height:250px;
     }
   }
 }
+// анимация
+.animation.animate, .animation1.animate, .animation2.animate{
+  animation: puls 2s 1;
+}
+@keyframes puls {
+  0% {
+    transform: scale(0.5);
+  }
+  
+  
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(146, 39, 143, 0);
+  }
+} 
