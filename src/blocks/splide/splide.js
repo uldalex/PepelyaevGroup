@@ -36,6 +36,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
       pauseOnHover:true,
       pauseOnFocus: true,
       arrows:false,
+      clones:0,
       breakpoints: {
         768: {
           perPage: 2,
@@ -58,6 +59,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
         pauseOnHover:true,
         pauseOnFocus: true,
         arrows:true,
+        clones:2,
       }); 
       splide.mount();
       }
