@@ -20,6 +20,7 @@
     &__inner {
         @include container();
         position:relative;
+        max-width: 1530px;
     }
     &__row {
         display:flex;
