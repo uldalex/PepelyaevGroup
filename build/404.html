@@ -42,6 +42,17 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
   <div class="page__inner">
     <div class="page__content">
       <header class="page-header" role="banner">
+        <div class="page-header__search-panel" id="search-fixed">
+          <div class="page-header__inner">
+            <h4>Поиск по сайту</h4>
+            <form action="/search/" method="get">
+              <div class="row">
+                <div class="col-xxl-5 col-xl-5 col-md-6"><input type="text" name="q" placeholder="Введите поисковый запрос" /></div>
+                <div class="col-xxl-2 col-xl-2 col-md-2"><input type="submit" value="Найти" /></div>
+              </div>
+            </form><a class="page-header__search-close solid" id="search-close" href="#">Закрыть</a>
+          </div>
+        </div>
         <div class="page-header__inner">
           <div class="page-header__row">
             <div class="page-header__left-part">
@@ -52,19 +63,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
             </div><a class="logo" href="/"><img src="img/logo.svg" alt="Logo" width="126" height="36" /></a>
             <div class="page-header__right-part">
               <ul class="page-header__list">
-                <li> <a class="page-header__search-link" id="search-open" href="#" aria-label="поиск">Поиск</a>
-                  <div class="page-header__search-panel" id="search-fixed">
-                    <div class="page-header__inner">
-                      <h4>Поиск по сайту</h4>
-                      <form action="/search/" method="get">
-                        <div class="row">
-                          <div class="col-xxl-5 col-xl-5 col-md-6"><input type="text" name="q" placeholder="Введите поисковый запрос" /></div>
-                          <div class="col-xxl-2 col-xl-2 col-md-2"><input type="submit" value="Найти" /></div>
-                        </div>
-                      </form><a class="page-header__search-close solid" id="search-close" href="#">Закрыть</a>
-                    </div>
-                  </div>
-                </li>
+                <li> <a class="page-header__search-link" id="search-open" href="#" aria-label="поиск">Поиск</a></li>
                 <li class="page-header__launguage-link"><a href="#" aria-label="выбрать язык"><span>Ru</span></a>
                   <div class="launguage-panel" id="launguage-panel">
                     <ul>
@@ -1061,6 +1060,17 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
           </div>
         </div>
       </footer>
+    </div>
+  </div>
+  <div class="mobile-panel">
+    <div class="mobile-panel__wrapper"> <a class="mobile-panel__search-link" id="search-open" href="#" aria-label="поиск"></a><a class="mobile-panel__authorize-link not-authorized" href="#login" data-toggle="modal" data-target="#login" aria-label="войти"> </a>
+      <div class="page-header__authorize-link authorized" id="lk" href="#" aria-label="Личный кабинет">Личный кабинет</div>
+      <div class="user-panel">
+        <ul>
+          <li> <a href="#" aria-label="Личный кабинет">Личный кабинет</a></li>
+          <li><a href="#" aria-label="Выход">Выйти</a></li>
+        </ul>
+      </div><a class="mobile-panel__phone-link" href="tel:+74957670007" aria-label="позвонить"> </a>
     </div>
   </div>
   <div class="modal  modal--login" id="login" tabindex="-1" role="dialog">

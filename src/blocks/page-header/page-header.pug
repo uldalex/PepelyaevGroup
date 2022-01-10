@@ -18,6 +18,16 @@ mixin page-header(mods)
     }
 
   header.page-header(class=allMods, role='banner')&attributes(attributes)
+    #search-fixed.page-header__search-panel 
+      .page-header__inner
+        h4 Поиск по сайту
+        form(action="/search/" method="get")
+          .row
+            .col-xxl-5.col-xl-5.col-md-6
+              input(type="text" name="q" placeholder="Введите поисковый запрос")
+            .col-xxl-2.col-xl-2.col-md-2
+              input(type="submit" value="Найти")
+        a#search-close.page-header__search-close.solid(href="#") Закрыть
     .page-header__inner
       .page-header__row
         .page-header__left-part 
@@ -32,16 +42,7 @@ mixin page-header(mods)
           ul.page-header__list
             li 
               a#search-open.page-header__search-link(href="#" aria-label="поиск") Поиск
-              #search-fixed.page-header__search-panel 
-                .page-header__inner
-                  h4 Поиск по сайту
-                  form(action="/search/" method="get")
-                    .row
-                      .col-xxl-5.col-xl-5.col-md-6
-                        input(type="text" name="q" placeholder="Введите поисковый запрос")
-                      .col-xxl-2.col-xl-2.col-md-2
-                        input(type="submit" value="Найти")
-                  a#search-close.page-header__search-close.solid(href="#") Закрыть
+ 
             li.page-header__launguage-link
               a(href="#" aria-label="выбрать язык")
                 span Ru
