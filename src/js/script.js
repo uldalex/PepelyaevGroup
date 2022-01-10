@@ -128,20 +128,29 @@ $('.main-nav__item--has-child').on('click', function(){
   return false;
 })
 }
-var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
-$('.page__content').bind(mousewheelevt, function(e){
+var header = $('.page-header'),
+	scrollPrev = 0;
 
-    var evt = window.event || e //equalize event object     
-    evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
-    var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
+  let menuElem = $('.page-header'), // Элемент который будет прилепать
+  menuFixed = 300, // кол-во пикселей от границы, когда меню "прилипнет" к краю экрана.
+  menuStatus = false; // Некая оптимизация.
 
-    if(delta > 0) {
-      $('.page__header').addClass('fixed')   
-    }
-    else{
-      $('.page__header').removeClass('fixed')   
-    }   
-});
+
+
+$(window).scroll(function() {
+	var scrolled = $(window).scrollTop();
+  if ( scrolled > 300 && scrolled < scrollPrev ) {
+		header.addClass('fixed').css({'top':'0%'});
+	}
+  else if( scrolled > scrollPrev ) {
+    header.css({'top':'-100%'});
+   
+  }
+  else {
+     header.removeAttr('style').removeClass('fixed'); 
+  }
+	scrollPrev = scrolled;
+});;
 //анимация
 $(window).scroll(function(){
 	var wt = $(window).scrollTop();
@@ -192,5 +201,50 @@ slider.addEventListener('mousedown', startDragging, false);
 slider.addEventListener('mouseup', stopDragging, false);
 slider.addEventListener('mouseleave', stopDragging, false);
 
+
+var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+InitVars();
+InitMenu();
+
+
+$(window).on("load",function(){
+	UpdateScroll();
+});
+
+
+
+
+
+function InitVars(){
+	$MainMenu = $('.block-rete__list');
+	$Speed = $Scroll = 0;
+	$MainMenuWidth = $MainMenu.width();
+	$MainMenuMaxScroll = $MainMenu[0].scrollWidth - $MainMenu.outerWidth();
+	$FirstLaunch = true;
+}
+
+function InitMenu(){
+	$MainMenu.on('mousemove', function(e) { var mouse_x = e.pageX - $MainMenu.offset().left; var mouseperc = 100 * mouse_x / $MainMenuWidth; $Speed = mouseperc - 50; }).on ( 'mouseleave', function() { $Speed = 0; });
+	
+	
+}
+
+
+
+function UpdateScroll() {
+	if ($Speed !== 0) { 
+		$Scroll += $Speed / 3;
+		if ($Scroll < 0){ $Scroll = 0;}
+		if ($Scroll > $MainMenuMaxScroll){$Scroll = $MainMenuMaxScroll;
+            $('.block-rete__list').removeClass('block-rete__list--scroll')
+        } else {
+            $('.block-rete__list').addClass('block-rete__list--scroll')
+        }
+		$MainMenu.scrollLeft($Scroll);
+	}
+	$MenuEvent = requestAnimationFrame(UpdateScroll);
+}
 
 

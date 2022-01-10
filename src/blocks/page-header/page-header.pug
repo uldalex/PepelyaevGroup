@@ -87,6 +87,7 @@ mixin page-header(mods)
                     li
                       a(href="#" aria-label="Выход") Выйти
         +burger('Показать содержание', 'nav', 'main-nav--open')(class='main-nav__toggler')
-
+        block nav
+          +main-nav('10')
 
       block

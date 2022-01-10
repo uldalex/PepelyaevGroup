@@ -23,6 +23,9 @@
          
      &.page-footer__small {
             font-size:0.9rem;
+            @media(max-width:600px){
+                display:none;
+            }
         }    
      &:hover {
        color: #92278F;

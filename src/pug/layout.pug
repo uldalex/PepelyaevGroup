@@ -40,7 +40,7 @@ html(class='page  no-js', lang='ru')
       .page__content
         //- header
         +page-header()
-            block nav
+            
         .banner
           .banner__inner
             .banner__row
@@ -142,7 +142,7 @@ html(class='page  no-js', lang='ru')
                 .victory-card 
                   .victory-card__wrapper
                     .victory-card__lables
-                      +label('Банкротство и антикризисная защита бизнеса',  '', 'a')(href='/' aria-label="Банкротство и антикризисная защита бизнеса")
+                      +label('Банкротство и антикризисная защита бизнеса')
                     .victory-card__content Юристы сохранили активы клиента в размере 4,45 млрд руб. в споре о субсидиарный ответственности.
                     .victory-card__footer
                       a.solid(href="#" aria-label=" Подробнее") Подробнее
@@ -150,8 +150,8 @@ html(class='page  no-js', lang='ru')
                 .victory-card
                   .victory-card__wrapper
                     .victory-card__lables
-                        +label('Таможенное право',  '', 'a')(href='/' aria-label="Таможенное право")
-                        +label('COVID-19. Юр. поддержка бизнеса',  '', 'a')(href='/' aria-label="COVID-19. Юр. поддержка бизнеса")
+                        +label('Таможенное право')
+                        +label('COVID-19. Юр. поддержка бизнеса')
                     .victory-card__content Юристы “Пепеляев Групп” завершили проект по судебному обжалованию и признанию незаконным отказа таможенного органа клиенту.
                     .victory-card__footer
                         a.solid(href="#" aria-label=" Подробнее") Подробнее
@@ -159,8 +159,8 @@ html(class='page  no-js', lang='ru')
                 .victory-card 
                   .victory-card__wrapper
                     .victory-card__lables
-                        +label('Энергетика',  '', 'a')(href='/' aria-label="Энергетика")
-                        +label('Таможенное право',  '', 'a')(href='/' aria-label="Таможенное право")
+                        +label('Энергетика')
+                        +label('Таможенное право')
                     .victory-card__content Антимонопольная практика “Пепеляев Групп” успешно доказали отсутствие картельного сговора на рынке дорожного строительства в Новосибирском УФАС.
                     .victory-card__footer
                         a.solid(href="#" aria-label=" Подробнее") Подробнее
@@ -168,7 +168,7 @@ html(class='page  no-js', lang='ru')
                 .victory-card
                   .victory-card__wrapper
                     .victory-card__lables
-                        +label('Антимонопольная практика',  '', 'a')(href='/' aria-label="Антимонопольная практика")
+                        +label('Антимонопольная практика')
                     .victory-card__content Антимонопольная практика “Пепеляев Групп” успешно доказали отсутствие картельного сговора на рынке дорожного строительства в Новосибирском УФАС.
                     .victory-card__footer
                         a.solid(href="#" aria-label=" Подробнее") Подробнее
@@ -265,6 +265,8 @@ html(class='page  no-js', lang='ru')
                         .event-card__date 10 января 2022 
                         +label('Москва')
                       .event-card__content V Международный медицинский инвестиционный форум
+                      .event-card__more 
+                        a(href="#" aria-label="Узнать больше") Узнать больше
                 li.splide__slide
                   .event-card
                     .event-card__wrapper 
@@ -272,13 +274,17 @@ html(class='page  no-js', lang='ru')
                         .event-card__date 14 января 2022 
                         +label('Онлайн')
                       .event-card__content Переходим на ЭДО: что должен учесть работодатель?
+                      .event-card__more 
+                        a(href="#" aria-label="Узнать больше") Узнать больше
                 li.splide__slide
                   .event-card
                     .event-card__wrapper 
                       .event-card__header 
                         .event-card__date 15 января 2022 
                         +label('Онлайн')
-                      .event-card__content Правовой режим линейного объекта: гражданское право и налоги 
+                      .event-card__content Правовой режим линейного объекта: гражданское право и налоги
+                      .event-card__more 
+                        a(href="#" aria-label="Узнать больше") Узнать больше
                 li.splide__slide
                   .event-card
                     .event-card__wrapper 
@@ -286,6 +292,8 @@ html(class='page  no-js', lang='ru')
                         .event-card__date 10 января 2022 
                         +label('Москва')
                       .event-card__content V Международный медицинский инвестиционный форум
+                      .event-card__more 
+                        a(href="#" aria-label="Узнать больше") Узнать больше
                 li.splide__slide
                   .event-card
                     .event-card__wrapper 
@@ -293,13 +301,17 @@ html(class='page  no-js', lang='ru')
                         .event-card__date 14 января 2022 
                         +label('Онлайн')
                       .event-card__content Переходим на ЭДО: что должен учесть работодатель?
+                      .event-card__more 
+                        a(href="#" aria-label="Узнать больше") Узнать больше
                 li.splide__slide
                   .event-card
                     .event-card__wrapper 
                       .event-card__header 
                         .event-card__date 15 января 2022 
                         +label('Онлайн')
-                      .event-card__content Правовой режим линейного объекта: гражданское право и налоги 
+                      .event-card__content Правовой режим линейного объекта: гражданское право и налоги
+                      .event-card__more 
+                        a(href="#" aria-label="Узнать больше") Узнать больше
                 li.splide__slide
                   .event-card
                     .event-card__wrapper 
@@ -307,6 +319,8 @@ html(class='page  no-js', lang='ru')
                         .event-card__date 10 января 2022 
                         +label('Москва')
                       .event-card__content V Международный медицинский инвестиционный форум
+                      .event-card__more 
+                        a(href="#" aria-label="Узнать больше") Узнать больше
                 li.splide__slide
                   .event-card
                     .event-card__wrapper 
@@ -314,13 +328,17 @@ html(class='page  no-js', lang='ru')
                         .event-card__date 14 января 2022 
                         +label('Онлайн')
                       .event-card__content Переходим на ЭДО: что должен учесть работодатель?
+                      .event-card__more 
+                        a(href="#" aria-label="Узнать больше") Узнать больше
                 li.splide__slide
                   .event-card
                     .event-card__wrapper 
                       .event-card__header 
                         .event-card__date 15 января 2022 
                         +label('Онлайн')
-                      .event-card__content Правовой режим линейного объекта: гражданское право и налоги 
+                      .event-card__content Правовой режим линейного объекта: гражданское право и налоги
+                      .event-card__more 
+                        a(href="#" aria-label="Узнать больше") Узнать больше
             .col.text-center 
               a.btn.animation1(href="#" aria-label="Все мероприятия") Все мероприятия
         .section-news 
