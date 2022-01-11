@@ -97,6 +97,7 @@
             position:absolute;
             left: -10%;
             width:150%;
+            min-width:150px;
             max-height:0px;
             overflow:hidden;
             top:120%;
@@ -423,7 +424,7 @@
     top:-100px;
     left:0;
     right:0;
-    background-color:#ffffff;
+    background-color:#f5f7fa;
     padding-bottom: 10px;
     transition:top 0.5s linear;
     box-shadow: 0 0 25px rgba(0,0,0, .15);
@@ -452,6 +453,12 @@
     }
     .page-header__list li {
         padding: 0 1.2rem
+    }
+    & .launguage-panel ul li {
+        padding:0.7rem 1.2rem;
+    }
+    & .user-panel ul li {
+        padding:0.7rem 1.2rem;
     }
    
 }
