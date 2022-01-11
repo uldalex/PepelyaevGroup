@@ -5,7 +5,7 @@
 .label {
   display: inline-block;
   position: relative;
-  margin: 0 0.1em;
+  margin: 0 10px 10px 0;
   vertical-align: baseline;
   line-height: 1;
   padding: 6px;
@@ -17,7 +17,6 @@
   line-height:140%;
   border-radius: 0;
   color:#838B98;
-  margin-bottom:10px;
 
   &:hover,
   &:focus {

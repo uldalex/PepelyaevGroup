@@ -414,7 +414,7 @@
     right:0;
     background-color:#ffffff;
     padding-bottom: 10px;
-    box-shadow: 0 0 25px rgba(0,0,0, .15);
+    box-shadow: 0 4px 15px rgba(180, 180, 180, 0.25);
     & .page-header__left-part{
         display:none;
     }
@@ -427,7 +427,7 @@
     background-color:#f5f7fa;
     padding-bottom: 10px;
     transition:top 0.5s linear;
-    box-shadow: 0 0 25px rgba(0,0,0, .15);
+    box-shadow: 0 4px 15px rgba(180, 180, 180, 0.25);
     transition:top 1s ease-in-out;
     & .page-header__left-part {
         display:none;

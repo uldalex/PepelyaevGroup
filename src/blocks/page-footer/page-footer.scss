@@ -102,11 +102,17 @@
     }
     &__contacts {
         display:flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         @media(max-width:600px){
             flex-direction: column;
             & a {
                 margin-bottom:20px;
+
+            }
+        }
+        & a {
+            &:first-child {
+                    margin-right:15px;
             }
         }
     }

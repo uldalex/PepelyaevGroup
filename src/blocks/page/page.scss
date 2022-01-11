@@ -715,6 +715,7 @@ pre {
     & input {
       padding: 0 15px;
       margin: 0 15px;
+      margin-bottom:15px;
       width: calc(100% - 30px);
       background-color: #f5f7fa;
       border: 0px;
@@ -1217,7 +1218,7 @@ cursor: url("data:image/svg+xml;charset=utf8,%3Csvg width='38' height='28' viewB
   background-image: linear-gradient(261deg, rgba(168, 51, 168, 0.4)20%,rgba(168, 51, 168, 0.3)40%,  rgba(127, 166, 216, 0.6)70%,  rgba(127, 166, 216, 0.4)100%);
   margin: 0 1rem;
   @media(max-width:600px){
-    margin:0 1px;
+   padding:0 1px;
   }
 
 
@@ -1484,6 +1485,8 @@ cursor: url("data:image/svg+xml;charset=utf8,%3Csvg width='38' height='28' viewB
     right:0;
     height: 50px;
     background-color: #ffffff;
+    z-index:300;
+    box-shadow: 0 -4px 15px rgba(180, 180, 180, 0.25);
     
     & .user-panel {
       position: fixed;
@@ -1575,6 +1578,23 @@ cursor: url("data:image/svg+xml;charset=utf8,%3Csvg width='38' height='28' viewB
               background-size: 90%;
           }
         }
+        &.authorized{
+          position:relative;
+          width:25px;
+          min-width:25px;
+          height:25px;
+              &:before {
+                  display:inline-block;
+                  content:'';
+                  width:25px;
+                  min-width:25px;
+                  height:25px;
+                  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.4991 17.5449C8.27559 17.5449 0.771484 25.0491 0.771484 34.2725C0.771484 34.674 1.09733 34.9998 1.49879 34.9998C1.90026 34.9998 2.2261 34.674 2.2261 34.2725C2.2261 25.8505 9.07715 18.9995 17.4991 18.9995C25.9211 18.9995 32.7722 25.8505 32.7722 34.2725C32.7722 34.674 33.098 34.9998 33.4995 34.9998C33.9009 34.9998 34.2268 34.674 34.2268 34.2725C34.2267 25.0476 26.7226 17.5449 17.4991 17.5449Z' fill='%2392278F'/%3E%3Cpath d='M17.5001 0C13.0898 0 9.5 3.58841 9.5 8.00014C9.5 12.4119 13.0899 16.0003 17.5001 16.0003C21.9104 16.0003 25.5003 12.4119 25.5003 8.00014C25.5003 3.58841 21.9104 0 17.5001 0ZM17.5001 14.5457C13.8913 14.5457 10.9546 11.6089 10.9546 8.00014C10.9546 4.39134 13.8913 1.45455 17.5001 1.45455C21.1089 1.45455 24.0457 4.39134 24.0457 8.00014C24.0457 11.6089 21.1089 14.5457 17.5001 14.5457Z' fill='%2392278F'/%3E%3C/svg%3E");
+                  background-repeat:no-repeat;
+                  background-position: left center;
+                  background-size: 90%;
+              }
+            }
       }
   }
 }
