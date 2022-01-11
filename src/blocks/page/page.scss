@@ -673,15 +673,15 @@ pre {
    }
    & .animate {
     position: absolute;
-    left: 43%;
-    width:75%;
+    left: 40%;
+    width:80%;
     top: 0;
     bottom: 0;
     margin-top: auto;
     margin-bottom: auto;
     max-width:1135px;
     z-index:0;
-    @media(max-width:1300px){ 
+    @media(max-width:1350px){ 
     left: 50%;
     width: 60%;
     }
