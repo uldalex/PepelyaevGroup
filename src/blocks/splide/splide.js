@@ -35,7 +35,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
       autoplay:true,
       pauseOnHover:true,
       pauseOnFocus: true,
-      arrows:false,
+      arrows:true,
       clones:0,
       breakpoints: {
         768: {
