@@ -137,6 +137,9 @@
         &__item {
             padding:25px 20px 10px;   
             transition: 0.3s;
+            @media(max-width:600px){
+                padding:25px 20px 10px 0;
+            }
             & a {
             background-color:transparent;
             font-size:1.1rem;
