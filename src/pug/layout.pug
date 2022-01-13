@@ -203,7 +203,7 @@ html(class='page  no-js', lang='ru')
             //блок рейтинга
             .row
               .block-rete  
-                h3 PEPELIAEV GROUP — Лидер международных рейтингов
+                h3 Пепеляев Групп — Лидер международных рейтингов
                 ul#logo-list.block-rete__list
                   li 
                    img(src="img/logos/logo1.svg" decoding="async" loading="lazy"   width="100" height="100" alt="Право-300")
@@ -356,14 +356,22 @@ html(class='page  no-js', lang='ru')
                 },
                 {
                   'id': 'tab02',
-                  'text': 'Аналитика',
+                  'text': 'Статьи',
                 },
                 {
                   'id': 'tab03',
-                  'text': 'Видео',
+                  'text': 'Комментарии',
                 },
                 {
                   'id': 'tab04',
+                  'text': 'Аналитика',
+                },
+                {
+                  'id': 'tab05',
+                  'text': 'Видео',
+                },
+                {
+                  'id': 'tab06',
                   'text': 'Книги',
                 },
                 ], 'some-mod')
@@ -462,6 +470,100 @@ html(class='page  no-js', lang='ru')
                           .event-card__footer 
                             a(href="#" aria-label="Подробнее") Подробнее
                 +tabs-item('tab02')
+                  +splide('articles','news')
+                    block splide 
+                    li.splide__slide
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('Статья')
+                          .event-card__content Президент подписал указ о внесении поправок в Конституцию, которые вступили в силу с 4 июля
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('статья')
+                          .event-card__content Рабочая группа по подготовке поправок к Конституции займется реформой всего законодательства
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('Статья')
+                          .event-card__content Разработан законопроект, облегчающий доступ к льготным ставкам налогов при выплатах за рубеж
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                    li.splide__slide
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('Статья')
+                          .event-card__content Президент подписал указ о внесении поправок в Конституцию, которые вступили в силу с 4 июля
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('Статья')
+                          .event-card__content Рабочая группа по подготовке поправок к Конституции займется реформой всего законодательства
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('Статья')
+                          .event-card__content Разработан законопроект, облегчающий доступ к льготным ставкам налогов при выплатах за рубеж
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                +tabs-item('tab03')
+                  +splide('comments','news')
+                    block splide 
+                    li.splide__slide
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('комментарий')
+                          .event-card__content Президент подписал указ о внесении поправок в Конституцию, которые вступили в силу с 4 июля
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('комментарий')
+                          .event-card__content Рабочая группа по подготовке поправок к Конституции займется реформой всего законодательства
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('комментарий')
+                          .event-card__content Разработан законопроект, облегчающий доступ к льготным ставкам налогов при выплатах за рубеж
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                    li.splide__slide
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('комментарий')
+                          .event-card__content Президент подписал указ о внесении поправок в Конституцию, которые вступили в силу с 4 июля
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('комментарий')
+                          .event-card__content Рабочая группа по подготовке поправок к Конституции займется реформой всего законодательства
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                      .event-card.event-card--news
+                        .event-card__wrapper 
+                          .event-card__header 
+                            +label('комментарий')
+                          .event-card__content Разработан законопроект, облегчающий доступ к льготным ставкам налогов при выплатах за рубеж
+                          .event-card__footer 
+                            a(href="#" aria-label="Подробнее") Подробнее
+                +tabs-item('tab04')
                   +splide('analitic','news')
                     block splide 
                     li.splide__slide
@@ -508,7 +610,7 @@ html(class='page  no-js', lang='ru')
                           .event-card__content Разработан законопроект, облегчающий доступ к льготным ставкам налогов при выплатах за рубеж
                           .event-card__footer 
                             a(href="#" aria-label="Подробнее") Подробнее
-                +tabs-item('tab03')
+                +tabs-item('tab05')
                   +splide('video','news')
                     block splide 
                     li.splide__slide
@@ -563,7 +665,7 @@ html(class='page  no-js', lang='ru')
                               img(src="img/perw/perw4.jpg" width="300" height="170"  alt="Описание видео") 
                             .event-card__content 5 главных событий в регулировании рынка
  
-                +tabs-item('tab04')
+                +tabs-item('tab06')
                   +splide('books','news')
                     block splide 
                      li.splide__slide
