@@ -45,6 +45,8 @@
     }
     &__row {
         @include row();
+        margin-left:0;
+        margin-right:0; 
         @media(max-width:600px){
         margin-left:0;
         margin-right:0; 
